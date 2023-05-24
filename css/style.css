@@ -1,0 +1,153 @@
+.slick-track,
+.slick-list {
+    transition-delay: 30ms;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .inner {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.header .inner h1 img {
+    max-width: 50%;
+    vertical-align: middle;
+}
+
+.header .inner .gnb {
+    display: flex;
+    margin: 0 0 0 auto;
+}
+
+.header .inner .gnb>ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header .inner .gnb>ul>li {
+    position: relative;
+}
+
+.header .inner .gnb>ul>li>a {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.main_vi {
+    position: relative;
+}
+
+.main_vi figure {
+    position: relative;
+    height: calc(100vh);
+}
+
+.main_vi .main_slide .vi01 {
+    background: url(../images/visual01.jpg) no-repeat center center/cover;
+}
+
+.main_vi .main_slide .vi02 {
+    background: url(../images/visual02.jpg) no-repeat center center/cover;
+}
+
+.main_vi .main_slide .vi03 {
+    background: url(../images/visual03.jpeg) no-repeat center center/cover;
+}
+
+.main_vi figure .slogan {
+    position: absolute;
+    top: 55%;
+    left: -50%;
+    width: 100%;
+    padding: 30px 0;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.main_vi .slogan strong {
+    font-size: 110px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.main_vi .slogan p {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+/* 슬라이드 버튼 */
+.main_vi .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1800px;
+    color: #f8f9fa;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.main_vi .arrows .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main_vi .arrows .left i {
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.main_vi .arrows .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main_vi .arrows .right i {
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.main_vi .scroll_icon {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.main_vi .scroll_icon i {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* 섹션02 */
+.itm_box {
+    padding: 100px 0;
+}
+
+.itm_box .inner {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
