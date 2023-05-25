@@ -31,7 +31,7 @@ $(function () {
     $('.mod_slide').slick({
         arrows: false,
         dots: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         responsive: [
             {
                 breakpoint: 768,

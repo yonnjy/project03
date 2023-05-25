@@ -23,12 +23,12 @@
 
 .header .inner {
     display: flex;
-    height: 100px;
+    height: 70px;
     align-items: center;
 }
 
 .header h1 img {
-    height: 70px;
+    height: 50px;
 }
 
 .header .gnb {
@@ -50,6 +50,7 @@
     line-height: 100px;
 }
 
+/* main visual */
 .main_vi {
     position: relative;
 }
@@ -94,7 +95,7 @@
     line-height: 50px;
 }
 
-/* 슬라이드 버튼 */
+/* slide btn */
 .main_vi .arrows {
     position: absolute;
     top: 50%;
@@ -184,23 +185,22 @@
 }
 
 /* model */
-
 .mod {
     position: relative;
-    padding: 90px 0 50px 0;
+    padding: 100px 0;
 }
 
 .mod h2 {
     margin: 0 0 20px 0;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .mod h2::after {
     content: '';
     display: block;
     position: absolute;
-    top: 120px;
+    top: 130px;
     width: 140px;
     height: 3px;
     background: #ddd;
@@ -246,24 +246,19 @@
     border: 2px solid #333;
 }
 
-.bg_banner {
-    width: 100%;
-}
 
-.bg_banner img {
-    width: 10%;
-}
 
 /* itm_box */
-
 .itm_box {
     position: relative;
-    padding: 100px 0;
+    padding: 100px 0 200px 0;
+    background: #f9f9f9;
 }
 
 .itm_box h2 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
+    margin: 0 0 30px 0;
 }
 
 .itm_box h2::after {
@@ -278,14 +273,84 @@
 
 .itm_box .inner>ul {
     display: grid;
-    grid-template-columns: 1tr 1tr 1tr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 30px;
 }
 
+.itm_box .img_box {
+    overflow: hidden;
+
+}
+
+.itm_box .img_box:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.itm_box .txt_box {
+    padding: 12px 0 0 0;
+}
+
+.itm_box .txt_box strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.itm_box .txt_box p {
+    line-height: 1.2;
+}
+
+.itm_box .itm_btn {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    width: 130px;
+    height: 40px;
+    transform: translate(-50%, 0);
+    font-weight: 500;
+    outline: none;
+    color: #fff;
+    background: #333;
+}
+
+/* background banner */
+.bg_banner {
+    height: 400px;
+    background-image: url(../images/banner01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg_banner .bg_txt {
+    text-align: center;
+    color: #fff;
+}
+
+.bg_banner .bg_txt strong {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.bg_banner .bg_txt p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.b_info {
+    padding: 100px 0;
+}
 
 /* footer topbtn */
 .footer {
     height: 200px;
     background: #333;
+    color: #fff;
 }
 
 .to_top {
