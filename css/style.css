@@ -11,12 +11,15 @@
     background: #fff;
     z-index: 999;
     border-bottom: 1px solid #ddd;
+    min-width: 750px;
 }
 
 .inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
+
 
 .header .inner {
     display: flex;
@@ -24,26 +27,24 @@
     align-items: center;
 }
 
-.header .inner h1 img {
-    max-width: 50%;
-    vertical-align: middle;
+.header h1 img {
+    height: 70px;
 }
 
-.header .inner .gnb {
-    display: flex;
+.header .gnb {
     margin: 0 0 0 auto;
 }
 
-.header .inner .gnb>ul {
+.header .gnb>ul {
     display: flex;
     gap: 30px;
 }
 
-.header .inner .gnb>ul>li {
+.header .gnb>ul>li {
     position: relative;
 }
 
-.header .inner .gnb>ul>li>a {
+.header .gnb>ul>li>a {
     display: block;
     text-align: center;
     line-height: 100px;
@@ -83,7 +84,7 @@
 
 .main_vi .slogan strong {
     font-size: 110px;
-    font-weight: 700;
+    font-weight: 900;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -100,9 +101,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 1800px;
+    max-width: 1850px;
+    font-size: 70px;
     color: #f8f9fa;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .main_vi .arrows .left {
@@ -112,7 +114,12 @@
 }
 
 .main_vi .arrows .left i {
-    font-size: 80px;
+    opacity: 40%;
+    cursor: pointer;
+}
+
+.main_vi .arrows .left:hover i {
+    opacity: 100%;
     cursor: pointer;
 }
 
@@ -123,31 +130,174 @@
 }
 
 .main_vi .arrows .right i {
-    font-size: 80px;
+    opacity: 40%;
     cursor: pointer;
 }
 
-.main_vi .scroll_icon {
+.main_vi .arrows .right:hover i {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.main_vi .b_icon {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0);
     color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: b_scroll 2s infinite;
 }
 
-.main_vi .scroll_icon i {
-    font-size: 50px;
+.main_vi .b_icon .scroll_box {
+    position: relative;
+    width: 32px;
+    height: 60px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.main_vi .b_icon .scroll_box i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+}
+
+@keyframes b_scroll {
+    0% {
+        opacity: 0;
+        transform: translate(0, -30%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, -30%);
+    }
+}
+
+/* model */
+
+.mod {
+    position: relative;
+    padding: 90px 0 50px 0;
+}
+
+.mod h2 {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mod h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 120px;
+    width: 140px;
+    height: 3px;
+    background: #ddd;
+}
+
+.mod .mod_slide {
+    margin: 0 -15px;
+}
+
+.mod .mod_slide figure {
+    padding: 0 15px;
+}
+
+.mod .mod_slide figure p {
+    text-align: center;
+    font-weight: 500;
+}
+
+.mod .mod_slide .slick-dots {
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+.mod .mod_slide .slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.mod .mod_slide .slick-dots li button {
+    font-size: 0;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #272727;
+    border: none;
+    outline: none;
     cursor: pointer;
 }
 
-/* 섹션02 */
+.mod .mod_slide .slick-dots li.slick-active button {
+    background: #fff;
+    border: 2px solid #333;
+}
+
+.bg_banner {
+    width: 100%;
+}
+
+.bg_banner img {
+    width: 10%;
+}
+
+/* itm_box */
+
 .itm_box {
+    position: relative;
     padding: 100px 0;
 }
 
-.itm_box .inner {
+.itm_box h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.itm_box h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 130px;
+    width: 280px;
+    height: 3px;
+    background: #ddd;
+}
+
+.itm_box .inner>ul {
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1tr 1tr 1tr;
+}
+
+
+/* footer topbtn */
+.footer {
+    height: 200px;
+    background: #333;
+}
+
+.to_top {
+    position: fixed;
+    right: 50px;
+    bottom: 220px;
+    z-index: 999;
+}
+
+.to_top i {
+    padding: 10px;
+    font-size: 20px;
+    color: #f9f9f9;
+    background: #333;
 }

@@ -26,4 +26,40 @@ $(function () {
             $('.header').removeClass('on');
         }
     });
+
+    // 자동차 슬라이드
+    $('.mod_slide').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
+    $('.mod .arrows .left').on('click', function () {
+        $('.mod_slide').slick('slickPrev');
+    });
+    $('.mod .arrows .right').on('click', function () {
+        $('.mod_slide').slick('slickNext');
+    });
+
+    // 올라가는 버튼
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+
+    // 올라가는 버튼 비주얼에서 안보이게
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $('.to_top').fadeIn(50);
+        } else {
+            $('.to_top').fadeOut(50);
+        }
+    });
+
 });
