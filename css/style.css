@@ -46,7 +46,7 @@
 .header .gnb>ul>li>a {
     display: block;
     text-align: center;
-    line-height: 100px;
+    line-height: 70px;
 }
 
 /* main visual */
@@ -140,39 +140,31 @@
 
 .main_vi .scroll_box {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 30px 15px;
-    border: 2px solid #fff;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
     color: #fff;
     animation: b_scroll 2s infinite;
 }
 
 .main_vi .scroll_box i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 32px;
 }
 
 @keyframes b_scroll {
     0% {
         opacity: 0;
-        transform: translate(-50%, -30%);
+        transform: translate(0, -30%);
     }
 
     50% {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform: translate(-50%, -30%);
+        transform: translate(0, -30%);
     }
 }
 
@@ -193,7 +185,7 @@
     display: block;
     position: absolute;
     top: 135px;
-    width: 150px;
+    width: 80px;
     height: 3px;
     background: #ddd;
 }
@@ -323,7 +315,7 @@
     display: block;
     position: absolute;
     top: 135px;
-    width: 300px;
+    width: 210px;
     height: 3px;
     background: #ddd;
 }
@@ -353,7 +345,8 @@
 }
 
 .itm_box .txt_box {
-    padding: 12px 0 0 0;
+    padding: 18px 0 0 0;
+    word-break: keep-all;
 }
 
 .itm_box .txt_box strong {
@@ -394,7 +387,8 @@
 /* 전시회장 정보 */
 .b_info {
     position: relative;
-    padding: 0 0 100px 0;
+    padding: 100px 0;
+    background: #f9f9f9;
 }
 
 .b_info h2 {
@@ -407,8 +401,8 @@
     content: '';
     display: block;
     position: absolute;
-    top: 35px;
-    width: 260px;
+    top: 135px;
+    width: 180px;
     height: 3px;
     background: #ddd;
 }
