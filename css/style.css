@@ -116,6 +116,7 @@
 
 .main_vi .arrows .left i {
     opacity: 40%;
+    transition: 0.5s;
 }
 
 .main_vi .arrows .left:hover i {
@@ -130,6 +131,7 @@
 
 .main_vi .arrows .right i {
     opacity: 40%;
+    transition: 0.5s;
 }
 
 .main_vi .arrows .right:hover i {
@@ -160,17 +162,17 @@
 @keyframes b_scroll {
     0% {
         opacity: 0;
-        transform: translate(0, -30%);
+        transform: translate(-50%, -30%);
     }
 
     50% {
         opacity: 1;
-        transform: translate(0, 0);
+        transform: translate(-50%, 0);
     }
 
     100% {
         opacity: 0;
-        transform: translate(0, -30%);
+        transform: translate(-50%, -30%);
     }
 }
 
@@ -274,7 +276,7 @@
 
 .bg_banner .bg_box {
     position: relative;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     height: 100%;
 }
 
@@ -296,7 +298,7 @@
 
 .bg_banner .bg_txt p {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: 500;
 }
 
@@ -334,11 +336,20 @@
 
 .itm_box .img_box {
     overflow: hidden;
+    border-radius: 10px;
+}
+
+.itm_box .img_box img {
+    transition: 0.8s;
 }
 
 .itm_box .img_box:hover img {
     transform: scale(1.1);
-    transition: 0.3s;
+}
+
+.itm_box .img_box::after {
+    content: '';
+    width: 20px;
 }
 
 .itm_box .txt_box {
@@ -356,27 +367,29 @@
     line-height: 1.2;
 }
 
-.itm_box .itm_btn {
+.itm_box .btn {
     position: absolute;
-    bottom: 100px;
+    bottom: 110px;
     left: 50%;
-    width: 150px;
-    height: 40px;
     transform: translate(-50%, 0);
-    font-weight: 700;
-    outline: none;
-    border: 2px solid #ddd;
-    color: #333;
-    background: #fff;
-    cursor: pointer;
+    padding: 6px 110px;
+    color: #999;
+    border: 2px solid #aaa;
     transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.itm_box .itm_btn:hover {
-    background: #333;
+.itm_box .btn:hover {
+    border: 2px solid #555;
+    background: #555;
     color: #fff;
-    border: none;
 }
+
+.itm_box .btn i {
+    font-size: 20px;
+}
+
 
 /* 전시회장 정보 */
 .b_info {
@@ -409,6 +422,41 @@
     flex: 1;
 }
 
+.b_info .left_info {
+    position: relative;
+    background: url(../images/ex_info.jpg) no-repeat center center/cover;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.b_info .left_info a {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 100% 0;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+
+.b_info .left_info:hover a {
+    display: block;
+}
+
+.b_info .left_info strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
 .b_info .right_info {
     display: flex;
     gap: 30px;
@@ -418,26 +466,28 @@
 
 .b_info .right_info .r_box {
     padding: 40px 0 40px 0;
-    border: 2px solid #ddd;
+    /* background: #333; */
+    border: 2px solid #333;
+    border-radius: 10px;
 }
 
 .b_info .right_info strong {
-    display: block;
     font-size: 20px;
     font-weight: 500;
+    color: #444;
 }
 
 .b_info .right_info p {
     line-height: 1.2;
-    padding: 10px 0 15px 0;
-    color: #888;
+    padding: 10px 0 0 0;
+    color: #555;
 }
 
 /* footer topbtn */
 .footer {
     padding: 30px 0 50px 0;
     background: #333;
-    color: #f2f1fb;
+    color: #bbb;
 }
 
 .footer .f_list {
@@ -477,6 +527,7 @@
 }
 
 .to_top {
+    display: none;
     position: fixed;
     right: 20px;
     bottom: 190px;
